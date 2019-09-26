@@ -1,0 +1,21 @@
+.hero-img {
+  background: url('https://www.sideshow.com/wp/wp-content/uploads/2018/12/smashultimate-prev-blogroll-1542650383319_1280w.jpg');
+  height: 50vh;
+  min-height: 500px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.register-form {
+  background: #00000088;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+  position: absolute;
+  right: 60px;
+  top: 60px;
+  height: 380px;
+}
