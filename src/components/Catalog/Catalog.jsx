@@ -29,6 +29,16 @@ export default class Catalog extends Component{
                     <Game data={game}/>
                 ))}
                 </div>
+                <button class="snipcart-add-item"
+                    data-item-name="My Subscription"
+                    data-item-id="subscription"
+                    data-item-url="/"
+                    data-item-price="20.00"
+                    data-item-payment-interval="Month"
+                    data-item-payment-interval-count="2"
+                    data-item-payment-trial="10">
+                    Subscribe now!
+                </button>
             </div>
         )
     }
