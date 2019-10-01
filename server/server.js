@@ -9,6 +9,7 @@ const gamesCtrl = require('./controllers/gamesController')
 
 const app = express()
 
+app.use(express.static(`${__dirname}/../build`))
 app.use(express.json())
 app.use(session({
     resave: false,
@@ -21,6 +22,11 @@ app.post('/auth/login', authCtrl.login)
 app.delete('/auth/logout', authCtrl.logout)
 
 app.get('/api/games', gamesCtrl.getGames)
+
+const path = require('path')
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html'))
+})
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
